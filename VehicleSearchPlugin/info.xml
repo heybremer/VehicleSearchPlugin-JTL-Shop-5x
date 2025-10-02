@@ -5,6 +5,7 @@
     <Author>Bremer Sitzbezüge</Author>
     <URL>https://bremer-sitzbezuege.de</URL>
     <XMLVersion>100</XMLVersion>
+    <ShopVersion>500</ShopVersion>
     <MinShopVersion>500</MinShopVersion>
     <MaxShopVersion>599</MaxShopVersion>
     <MinPHPVersion>7.4</MinPHPVersion>
@@ -33,24 +34,16 @@
             </CustomLink>
         </AdminMenu>
         
-        <Frontend>
+        <Hooks>
             <Hook>
-                <ID>1</ID>
-                <Name>HOOK_HEADER_HTML</Name>
-                <Filename>frontend/hooks/header.php</Filename>
+                <HookName>HOOK_HEADER_HTML</HookName>
+                <File>frontend/hooks/header.php</File>
             </Hook>
             <Hook>
-                <ID>2</ID>
-                <Name>HOOK_FOOTER_HTML</Name>
-                <Filename>frontend/hooks/footer.php</Filename>
+                <HookName>HOOK_FOOTER_HTML</HookName>
+                <File>frontend/hooks/footer.php</File>
             </Hook>
-        </Frontend>
+        </Hooks>
     </Install>
     
-    <Uninstall>
-        <Migration>
-            <Version>1.0.0</Version>
-            <File>Migrations/001_drop_vehicle_search_tables.php</File>
-        </Migration>
-    </Uninstall>
 </jtlshopplugin>
