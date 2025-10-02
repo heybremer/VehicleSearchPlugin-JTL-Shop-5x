@@ -41,6 +41,9 @@ class CreateVehicleSearchTables extends Migration implements IMigration
             ('cache_duration', '3600', 'Cache duration in seconds'),
             ('show_vehicle_images', '1', 'Show vehicle images in results'),
             ('enable_advanced_search', '1', 'Enable advanced search options')
+            ON DUPLICATE KEY UPDATE
+                `cValue` = VALUES(`cValue`),
+                `cDescription` = VALUES(`cDescription`)
         ");
 
         $this->execute("
