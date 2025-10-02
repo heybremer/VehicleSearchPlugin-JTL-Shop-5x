@@ -26,13 +26,13 @@
             <File>Migrations/001_create_vehicle_search_tables.php</File>
         </Migration>
         
-        <AdminMenu>
-            <CustomLink>
+        <Adminmenu>
+            <Customlink>
                 <Name>Vehicle Search Settings</Name>
                 <Filename>adminmenu/vehicle_search_settings.php</Filename>
                 <Description>Configure vehicle search settings</Description>
-            </CustomLink>
-        </AdminMenu>
+            </Customlink>
+        </Adminmenu>
         
         <Frontend>
             <Hook>
