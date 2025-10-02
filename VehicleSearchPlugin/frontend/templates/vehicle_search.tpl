@@ -240,8 +240,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchResults = document.getElementById('searchResults');
     const resultsContainer = document.getElementById('resultsContainer');
 
-    // CSRF Token
-    const csrfToken = document.querySelector('input[name="csrf_token"]').value;
+    // Plugin configuration & CSRF token
+    const pluginConfig = window.VehicleSearchPlugin || {};
+    const csrfToken = typeof pluginConfig.csrfToken === 'string' && pluginConfig.csrfToken.length > 0
+        ? pluginConfig.csrfToken
+        : null;
+
+    if (!csrfToken) {
+        console.error('VehicleSearchPlugin configuration missing or invalid.');
+        alert('Güvenlik doğrulama jetonu yüklenemedi. Lütfen sayfayı yenileyin veya destek ile iletişime geçin.');
+        return;
+    }
 
     // Initialize
     loadManufacturers();
