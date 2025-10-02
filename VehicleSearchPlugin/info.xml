@@ -36,12 +36,10 @@
         
         <Frontend>
             <Hook>
-                <ID>1</ID>
                 <Name>HOOK_HEADER_HTML</Name>
                 <Filename>frontend/hooks/header.php</Filename>
             </Hook>
             <Hook>
-                <ID>2</ID>
                 <Name>HOOK_FOOTER_HTML</Name>
                 <Filename>frontend/hooks/footer.php</Filename>
             </Hook>
