@@ -5,6 +5,7 @@
     <Author>Bremer Sitzbezüge</Author>
     <URL>https://bremer-sitzbezuege.de</URL>
     <XMLVersion>100</XMLVersion>
+    <ShopVersion>500</ShopVersion>
     <MinShopVersion>500</MinShopVersion>
     <MaxShopVersion>599</MaxShopVersion>
     <MinPHPVersion>7.4</MinPHPVersion>
