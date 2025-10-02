@@ -36,14 +36,14 @@
         
         <Hooks>
             <Hook>
-                <HookName>HOOK_HEADER_HTML</HookName>
-                <File>frontend/hooks/header.php</File>
+                <Name>HOOK_HEADER_HTML</Name>
+                <Filename>frontend/hooks/header.php</Filename>
             </Hook>
             <Hook>
-                <HookName>HOOK_FOOTER_HTML</HookName>
-                <File>frontend/hooks/footer.php</File>
+                <Name>HOOK_FOOTER_HTML</Name>
+                <Filename>frontend/hooks/footer.php</Filename>
             </Hook>
         </Hooks>
     </Install>
-    
+
 </jtlshopplugin>
