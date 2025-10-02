@@ -87,6 +87,15 @@ Eklentiyi özel template'lerinizde kullanmak için:
 {include file='plugins/VehicleSearchPlugin/frontend/templates/vehicle_search.tpl'}
 ```
 
+## Paketleme
+
+Dağıtım paketi hazırlamak için aşağıdaki adımları izleyin:
+
+1. `VehicleSearchPlugin` klasörünün yerel kopyasını güncellediğinizden emin olun.
+2. ZIP arşivini oluştururken sadece bu klasörü ve içindeki gerekli eklenti dosyalarını (`info.xml`, `Bootstrap.php`, `src/`, `frontend/`, `adminmenu/`, `Migrations/` vb.) dahil edin.
+3. Arşiv kökünde fazladan üst klasör bırakmayın; ZIP açıldığında doğrudan `VehicleSearchPlugin/` klasörü görünmelidir.
+4. Oluşturduğunuz `VehicleSearchPlugin.zip` dosyasını JTL Shop yönetim paneli üzerinden yükleyin veya elle eklenti klasörüne çıkarın.
+
 ### AJAX API
 
 Eklenti aşağıdaki AJAX endpoint'lerini sağlar:
