@@ -1,25 +1,22 @@
 <?php
 
-namespace Plugin\VehicleSearchPlugin\Frontend\Hooks;
+declare(strict_types=1);
 
-use JTL\Plugin\Hook\HookInterface;
+use JTL\Shop;
+use JTL\Plugin\PluginInterface;
 
-/**
- * Class Header
- * @package Plugin\VehicleSearchPlugin\Frontend\Hooks
- */
-class Header implements HookInterface
-{
-    /**
-     * @inheritdoc
-     */
-    public function execute(array $args): void
-    {
-        // Add CSS and JS resources to header
-        $plugin = $this->getPlugin();
-        if ($plugin) {
-            $pluginUrl = $plugin->getPaths()->getFrontendPath();
-            echo '<link rel="stylesheet" href="' . $pluginUrl . 'css/vehicle-search.css" type="text/css" />';
-        }
-    }
+/** @var array<string, mixed> $args */
+$plugin = $args['plugin'] ?? null;
+if (!$plugin instanceof PluginInterface) {
+    $plugin = Shop::Container()->getPluginHelper()->getPluginById('VehicleSearchPlugin');
 }
+
+if ($plugin === null) {
+    return;
+}
+
+$path = $plugin->getPaths()->getFrontendPath();
+$stylesheet = $path . 'css/vehicle-search.css';
+
+echo '<link rel="stylesheet" type="text/css" href="' . htmlspecialchars($stylesheet, ENT_QUOTES, 'UTF-8') . '" />';
+
