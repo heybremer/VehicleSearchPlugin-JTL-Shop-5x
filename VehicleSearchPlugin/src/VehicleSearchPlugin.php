@@ -330,7 +330,10 @@ class VehicleSearchPlugin
     {
         $statement = $this->db->getPDO()->prepare($sql);
         foreach ($params as $key => $value) {
-            $parameter = str_starts_with((string) $key, ':') ? (string) $key : ':' . $key;
+            $normalizedKey = (string) $key;
+            $parameter = $normalizedKey !== '' && $normalizedKey[0] === ':'
+                ? $normalizedKey
+                : ':' . $normalizedKey;
             $type = PDO::PARAM_STR;
             $finalValue = $value;
 
