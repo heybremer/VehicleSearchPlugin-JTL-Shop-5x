@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Plugin\VehicleSearchPlugin\Src\VehicleSearchPlugin;
+use Plugin\VehicleSearchPlugin\VehicleSearchPlugin;
 use JTL\Shop;
 
 require_once PFAD_ROOT . 'admin/includes/admininclude.php';
