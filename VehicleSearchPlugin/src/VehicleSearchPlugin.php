@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Plugin\VehicleSearchPlugin\Src;
+namespace Plugin\VehicleSearchPlugin;
 
 use JTL\Cache\JTLCacheInterface;
 use JTL\Plugin\PluginInterface;

@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use JTL\Shop;
-use Plugin\VehicleSearchPlugin\Src\VehicleSearchPlugin;
+use Plugin\VehicleSearchPlugin\VehicleSearchPlugin;
 
 require_once PFAD_ROOT . 'includes/globalinclude.php';
 
